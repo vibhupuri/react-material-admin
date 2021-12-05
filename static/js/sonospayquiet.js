@@ -57,3 +57,5 @@ allSpan.find((i)=>i.innerText=="Apple iPhone 6").innerText="Phone Pe";
 allSpan.find((i)=>i.innerText=="Phone Pe").nextSibling.innerText="phonepe.com";
 allSpan.find((i)=>i.innerText=="Apple MacBook").innerText="BHIM UPI";
 allSpan.find((i)=>i.innerText=="BHIM UPI").nextSibling.innerText="bhimupi.org.in";
+
+document.querySelector('.MuiDrawer-root').style.pointerEvents="none"
