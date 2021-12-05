@@ -59,3 +59,5 @@ allSpan.find((i)=>i.innerText=="Apple MacBook").innerText="BHIM UPI";
 allSpan.find((i)=>i.innerText=="BHIM UPI").nextSibling.innerText="bhimupi.org.in";
 
 document.querySelector('.MuiDrawer-root').style.pointerEvents="none"
+document.querySelectorAll('.MuiPaper-rounded')[0].addEventListener('click',()=>location.href='/react-material-admin/quietjs/sendpay.html')
+document.querySelectorAll('.MuiPaper-rounded')[1].addEventListener('click',()=>location.href='/react-material-admin/quietjs/recpay.html')
