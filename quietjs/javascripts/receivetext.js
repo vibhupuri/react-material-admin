@@ -8,6 +8,7 @@ var TextReceiver = (function() {
         var total = recvObj.failures + recvObj.successes
         var ratio = recvObj.failures/total * 100;
         recvObj.warningbox.textContent = "You may need to move the transmitter closer to the receiver and set the volume to 50%. Packet Loss: " + recvObj.failures + "/" + total + " (" + ratio.toFixed(0) + "%)";
+        !document.querySelector("pre").innerText.toLowerCase().includes('merchant')?Toaster.postMessage(document.querySelector("pre").innerText):null;
     };
 
     function onReceiverCreateFail(reason, recvObj) {
