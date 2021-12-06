@@ -666,7 +666,7 @@ var QuietLab = (function() {
     function onReceiverCreateFail(reason) {
         console.log("failed to create quiet receiver: " + reason);
         warningbox.classList.remove("hidden");
-        warningbox.textContent = "Sorry, it looks like this example is not supported by your browser. Please give permission to use the microphone or try again in Google Chrome or Microsoft Edge."
+        warningbox.textContent = reason
     };
 
     function onReceiverStatsUpdate(stats) {
