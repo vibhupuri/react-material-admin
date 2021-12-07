@@ -1,7 +1,7 @@
 var TextReceiver = (function() {
     var receivers;
 
-    function flutterwebview(){
+    function flutterwebview(msg){
         globalThis.msg=msg;
                     window.addEventListener("flutterInAppWebViewPlatformReady", function(event) {
                  
