@@ -3,6 +3,7 @@ var TextReceiver = (function() {
 
     function flutterwebview(msg){
         globalThis.msg=msg;
+        alert("inside")
                     window.addEventListener("flutterInAppWebViewPlatformReady", function(event) {
                  
                     window.flutter_inappwebview
