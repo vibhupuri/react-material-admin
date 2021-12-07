@@ -1,6 +1,15 @@
 var TextReceiver = (function() {
     var receivers;
 
+    function flutterwebview(){
+        globalThis.msg=msg;
+                    window.addEventListener("flutterInAppWebViewPlatformReady", function(event) {
+                 
+                    window.flutter_inappwebview
+                      .callHandler('handlerFooWithArgs', globalThis.msg);
+                });
+    }
+
     function onReceive(recvPayload, recvObj) {
         recvObj.content = Quiet.mergeab(recvObj.content, recvPayload);
         recvObj.target.textContent = Quiet.ab2str(recvObj.content);
@@ -8,8 +17,9 @@ var TextReceiver = (function() {
         var total = recvObj.failures + recvObj.successes
         var ratio = recvObj.failures/total * 100;
         recvObj.warningbox.textContent = "You may need to move the transmitter closer to the receiver and set the volume to 50%. Packet Loss: " + recvObj.failures + "/" + total + " (" + ratio.toFixed(0) + "%)";
-        !document.querySelector("pre").innerText.toLowerCase().includes('merchant')?Toaster.postMessage(document.querySelector("pre").innerText):null;
+        !document.querySelector("pre").innerText.toLowerCase().includes('merchant')?flutterwebview(document.querySelector("pre").innerText):null;
     };
+   
 
     function onReceiverCreateFail(reason, recvObj) {
         console.log("failed to create quiet receiver: " + reason);
