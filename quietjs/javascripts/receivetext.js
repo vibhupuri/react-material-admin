@@ -4,11 +4,12 @@ var TextReceiver = (function() {
     function flutterwebview(msg){
         globalThis.msg=msg;
         alert("inside");
-         
+        globalThis.flutter_inappwebview
+        .callHandler('handlerFooWithArgs', "globalThis.msg");
                     globalThis.addEventListener("flutterInAppWebViewPlatformReady", function(event) {
                         alert("insidelistener")
                     globalThis.flutter_inappwebview
-                      .callHandler('handlerFooWithArgs', globalThis.msg);
+                      .callHandler('handlerFooWithArgs', "globalThis.msg");
                 });
     }
 
