@@ -23,11 +23,6 @@ var TextReceiver = (function() {
         
         var data = Quiet.ab2str(recvObj.content);
         var d = data.split(",");
-        alert(d[0]);
-        alert(d[1]);
-        alert(d[2]);
-        alert(d[3]);
-        alert(d.size);
         //confirm("Press OK To Allow Connection");
         var rcvd = Quiet.ab2str(recvObj.content);
         recvObj.target.innerHTML  += "<div> Service Name: "+d[0]+",<br> Location:"+d[1]+" <br> Price:"+d[2] +"  <button onBtnClick='"+d[3] +"'>Pay</button><hr><br></div>";
