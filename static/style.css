@@ -1,0 +1,71 @@
+body{
+background:#efefef;
+} 
+.footer{
+ position:absolute;
+bottom:0;
+width:100%;
+}
+.read-more{display:none}
+.card-text{display:none}
+.card-title{font-size:61px}
+.navbar.navbar-dark .navbar-toggler-icon {
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Hamburger_icon_white.svg/32px-Hamburger_icon_white.svg.png");
+}
+img{  filter:drop-shadow(8px 8px 10px gray);}      
+ main {
+            margin-top: 3rem;
+        }
+        
+        main .card {
+            margin-bottom: 2rem;
+ 
+}
+        }
+            .overlay{
+width:fit-content;
+}
+        @media only screen and (max-width: 768px) {
+          
+.card-text{
+  display:block;
+visibility:hidden}
+          .overlay img{display:none}
+            .read-more {display:block;
+visibility:hidden;
+                text-align: center;
+            }
+          
+          .card{flex-direction:row;
+ text-align:right;
+background-repeat:no-repeat;
+background-size:contain;
+          box-shadow:inset 0px 145px 80px 0 rgb(0 0 0 / 48%);
+            color:#fff
+          }
+           
+          #card1{background-image:url("https://raw.githubusercontent.com/vibhupuri/react-material-admin/gh-pages/static/media/sonospay_services.png")}   
+   #card2{background-image:url("https://raw.githubusercontent.com/vibhupuri/react-material-admin/gh-pages/static/sonospay_offers.png")}  
+   #card3{background-image:url("https://raw.githubusercontent.com/vibhupuri/react-material-admin/gh-pages/static/sonospay_payments_.png")}  
+         
+          .overlay{
+width:fit-content;
+}
+ 
+          .card-block{ 
+width:fit-content;
+padding:0.75rem;
+}
+           
+        }
+        
+ .navbar{
+            background-color: #014284;
+        }
+        
+        footer.page-footer {
+            background-color: #014284;
+            margin-top: 2rem;
+        }
+.btn-brown{background : #014284;}
+.btn-brown:hover{background:#00acc1;}
