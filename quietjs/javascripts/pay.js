@@ -3,7 +3,7 @@ var UPIPay = (function() {
     function flutterwebview(msg){
       //  globalThis.msg=msg;
 
-      alert("hrlll");
+      //alert("hrlll");
 
         globalThis.msg="Sonos Pay";
         globalThis.flutter_inappwebview
