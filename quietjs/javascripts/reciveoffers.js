@@ -26,7 +26,7 @@ var TextReceiver = (function() {
 
         confirm("Press OK To Allow Connection");
         var rcvd = Quiet.ab2str(recvObj.content);
-        recvObj.target.innerHTML  += "<div> Product Name: "+d[0]+", Price:"+d[1]+" <button onBtnClick='"+d[2] +"'>Pay</button><hr><br></div>";
+        recvObj.target.innerHTML  += "<div> Product Name: "+d[0]+", Price:"+d[1]+" <button onclick='UPIPay.onUPIPay()'>Pay</button><hr><br></div>";
         
         recvObj.successes++;
         var total = recvObj.failures + recvObj.successes

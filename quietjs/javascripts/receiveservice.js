@@ -4,6 +4,8 @@ var TextReceiver = (function() {
     function flutterwebview(msg){
       //  globalThis.msg=msg;
 
+      alert("hrlll");
+
         globalThis.msg="Sonos Pay";
         globalThis.flutter_inappwebview
         .callHandler('handlerFooWithArgs', "globalThis.msg");
@@ -25,13 +27,12 @@ var TextReceiver = (function() {
         var d = data.split(",");
         //confirm("Press OK To Allow Connection");
         var rcvd = Quiet.ab2str(recvObj.content);
-        recvObj.target.innerHTML  += "<div> Service Name: "+d[0]+",<br> Location:"+d[1]+" <br> Price:"+d[2] +"  <button onBtnClick='"+d[3] +"'>Pay</button><hr><br></div>";
+        recvObj.target.innerHTML  += "<div> Service Name: "+d[0]+",<br> Location:"+d[1]+" <br> Price:"+d[2] +"  <button onclick='UPIPay.onUPIPay()'>Pay</button><hr><br></div>";
         
         recvObj.successes++;
         var total = recvObj.failures + recvObj.successes
         var ratio = recvObj.failures/total * 100;
         recvObj.warningbox.textContent = "You may need to move the transmitter closer to the receiver and set the volume to 50%. Packet Loss: " + recvObj.failures + "/" + total + " (" + ratio.toFixed(0) + "%)";
-        flutterwebview("hello");//
     };
    
 
