@@ -1,0 +1,10 @@
+Offers:
+
+Burger,100,sam@okhdfcbank
+Pizza,200,ash@[aytm
+
+
+Services:
+
+Valet,Mall,150,s@okhdfc
+Shoot,Mall,
